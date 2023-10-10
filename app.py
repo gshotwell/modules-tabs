@@ -34,7 +34,7 @@ def mount_tab(tab):
 # Define routes for the application
 tabs = ["Data", "Basics", "Models"]
 routes = [mount_tab(tab) for tab in tabs]
-routes.append(Mount("", App(top_ui(selected="Data"), top_server)))
+routes.append(Mount("/", App(top_ui(selected="Data"), top_server)))
 
 # We call the Sarlette function directly so that we can pass in the route
 # information.
